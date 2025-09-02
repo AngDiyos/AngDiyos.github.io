@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Story+Script&display=swap');
+
 body {
   background-color: #b34448;
   background-image: url('IMG_4150.jpeg');
   background-size: cover;
-  font-family: 'Arial', sans-serif;
+  font-family: "Story Script", sans-serif;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rubik Bubbles", sans-serif;
 }
