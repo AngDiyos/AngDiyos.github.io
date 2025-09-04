@@ -28,6 +28,8 @@ section.main {
     flex: 3;
     padding: 20px;
     box-sizing: border-box;
+  backgroun: black;
+  border-radius: 24px;
 }
 
 /* Aside - 25% width on desktop */
@@ -35,6 +37,7 @@ aside {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 24px;
 }
 
 /* Responsive behavior */
