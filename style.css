@@ -6,6 +6,8 @@ body {
   background-size: cover;
   font-family: "Story Script", sans-serif;
   color: white;
+  display: flex;
+    flex-wrap: wrap;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,4 +22,29 @@ a {
 a:visited {
   text-decoration: line-through;
   color: rgba(255,255,255,.5);
+}
+
+section.main {
+    flex: 3;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Aside - 25% width on desktop */
+aside {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    section.main,
+    aside {
+        flex: 100%;
+    }
 }
