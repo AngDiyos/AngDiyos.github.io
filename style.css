@@ -114,5 +114,51 @@ a:visited {
         font-size: 0.85em;
     }
 
+    /* === Sidebar Box Styling === */
+.sidebar-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* === Mood Status === */
+.mood-status {
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* === Top 8 === */
+.top-8 h3 {
+    font-family: "Rubik Bubbles", sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.top-8-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.friend {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+/* === Profile Picture === */
+.profile-pic {
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+
 }
 
