@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Story+Script&display=swap');
 
-/* ===== General Reset & Body ===== */
 body {
     margin: 0;
     background-color: #b34448;
@@ -11,7 +10,6 @@ body {
     color: white;
 }
 
-/* ===== Container for full layout ===== */
 .page-container {
     max-width: 1100px;
     margin: 20px auto;
@@ -21,7 +19,6 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-/* ===== Header ===== */
 .site-header {
     background-color: rgba(0,0,0,0.8);
     padding: 20px;
@@ -35,13 +32,11 @@ body {
     font-size: 2em;
 }
 
-/* ===== Main layout: sidebar + main ===== */
 .content-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* ===== Sidebar: Profile + Links ===== */
 .sidebar {
     flex: 1;
     min-width: 250px;
@@ -51,12 +46,14 @@ body {
 }
 
 .profile-pic {
-    width: 100%;
+    width: 120px;
     border-radius: 12px;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ===== Main content area ===== */
 .main-content {
     flex: 2;
     padding: 20px;
@@ -68,7 +65,6 @@ body {
     margin-top: 0;
 }
 
-/* ===== Links styling ===== */
 a {
     color: white;
     text-decoration: none;
@@ -79,7 +75,6 @@ a:visited {
     text-decoration: line-through;
 }
 
-/* ===== Responsive tweaks ===== */
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
@@ -89,5 +84,35 @@ a:visited {
         border-right: none;
         border-bottom: 1px solid #fff;
     }
+    /* === Mood Status === */
+    .mood-status {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-style: italic;
+        font-size: 0.9em;
+    }
+    
+    /* === Top 8 === */
+    .top-8 h3 {
+        font-family: "Rubik Bubbles", sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .top-8-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .friend {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 0.85em;
+    }
+
 }
 
