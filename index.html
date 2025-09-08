@@ -38,23 +38,54 @@
                     </ul>
                 </div>
 				
-                <div class="sidebar-box top-8">
-                    <h3>Top 8</h3>
-                    <div class="top-8-grid">
-                        <div class="friend">Batman</div>
-                        <div class="friend">Obama</div>
-                        <div class="friend">Chief Keef</div>
-                        <div class="friend">Spider-Man</div>
-                        <div class="friend">Tony Hawk</div>
-                        <div class="friend">Chino Moreno</div>
-                        <div class="friend">Bam</div>
-                        <div class="friend">Johnny Knoxville</div>
-                    </div>
-                </div>
+<div class="sidebar-box top-8">
+  <h3>Top 8</h3>
+  <div class="top-8-grid">
+    <div class="friend">
+      <img src="friends/batman.jpg" alt="Batman" />
+      <span>Batman</span>
+    </div>
+    <div class="friend">
+      <img src="friends/obama.jpg" alt="Obama" />
+      <span>Obama</span>
+    </div>
+    <div class="friend">
+      <img src="friends/chiefkeef.jpg" alt="Chief Keef" />
+      <span>Chief Keef</span>
+    </div>
+    <div class="friend">
+      <img src="friends/spiderman.jpg" alt="Spider-Man" />
+      <span>Spider-Man</span>
+    </div>
+    <div class="friend">
+      <img src="friends/tonyhawk.jpg" alt="Tony Hawk" />
+      <span>Tony Hawk</span>
+    </div>
+    <div class="friend">
+      <img src="friends/chino.jpg" alt="Chino Moreno" />
+      <span>Chino Moreno</span>
+    </div>
+    <div class="friend">
+      <img src="friends/bam.jpg" alt="Bam" />
+      <span>Bam</span>
+    </div>
+    <div class="friend">
+      <img src="friends/knoxville.jpg" alt="Johnny Knoxville" />
+      <span>Johnny Knoxville</span>
+    </div>
+  </div>
+</div>
 
             </aside>
 			
             <main class="main-content">
+				<div class="music-player">
+  <button id="playButton">Play Music 🎵</button>
+  <audio id="backgroundMusic" loop>
+    <source src="uzi-zay-buy-it.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
                 <h2>We are so back</h2>
                 <p>This is a little spot for me to keep yall updated</p>
                 <p>I'm prob out gettin fitted up :p</p>
@@ -69,4 +100,15 @@
 
     </div>
 </body>
+	<script>
+  const playButton = document.getElementById("playButton");
+  const music = document.getElementById("backgroundMusic");
+
+  playButton.addEventListener("click", () => {
+    music.play();
+    playButton.textContent = "🎶 Music Playing";
+    playButton.disabled = true; // optional: disable after clicked
+  });
+</script>
+
 </html>
