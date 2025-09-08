@@ -1,53 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Story+Script&display=swap');
 
 body {
-  background-color: #b34448;
-  background-image: url('IMG_4150.jpeg');
-  background-size: cover;
-  font-family: "Story Script", sans-serif;
-  color: white;
-  display: flex;
-    flex-wrap: wrap;
+    margin: 0; /* ✅ NEW: Remove default margin */
+    background-color: #b34448;
+    background-image: url('IMG_4150.jpeg');
+    background-size: cover;
+    font-family: "Story Script", sans-serif;
+    color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Rubik Bubbles", sans-serif;
+/* ✅ NEW: Wrapper for layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* ✅ NEW: Top profile section */
+.profile-header {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
 
+/* ✅ NEW: Profile picture */
+.profile-pic {
+    width: 150px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+/* ✅ NEW: Text next to picture */
+.profile-info h1 {
+    font-family: "Rubik Bubbles", sans-serif;
+    margin: 0;
+}
+
+/* ✅ UPDATED: Sidebar with bg and padding */
+.sidebar {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* ✅ NEW: Main text/post area */
+.main-content {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ✅ SAME: Link styling */
 a {
-  color: white;
+    color: white;
+    text-decoration: none;
 }
 
 a:visited {
-  text-decoration: line-through;
-  color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,.6);
+    text-decoration: line-through;
 }
 
-section.main {
-    flex: 3;
-    padding: 20px;
-    box-sizing: border-box;
-  backgroun: black;
-  border-radius: 24px;
+/* ✅ SAME: Headings font */
+h2 {
+    font-family: "Rubik Bubbles", sans-serif;
 }
 
-/* Aside - 25% width on desktop */
-aside {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 24px;
-}
-
-/* Responsive behavior */
+/* ✅ UPDATED: Responsive tweaks */
 @media (max-width: 768px) {
-    body {
+    .profile-header {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    section.main,
-    aside {
-        flex: 100%;
+    .profile-pic {
+        margin-bottom: 10px;
     }
 }
