@@ -110,6 +110,53 @@
     </div>
 </body>
 	<script>
+  const form = document.getElementById("bulletinForm");
+  const wall = document.getElementById("messageWall");
+
+  // Load saved messages
+  window.onload = () => {
+    const savedMessages = JSON.parse(localStorage.getItem("bulletinMessages")) || [];
+    savedMessages.forEach(msg => renderMessage(msg));
+  };
+
+  // Handle form submission
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("userName").value.trim();
+    const text = document.getElementById("userMessage").value.trim();
+
+    if (!name || !text) return;
+
+    const message = { name, text };
+    renderMessage(message);
+    saveMessage(message);
+
+    // Reset form
+    form.reset();
+  });
+
+  function renderMessage({ name, text }) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message");
+
+    msgDiv.innerHTML = `
+      <div class="name">${name}</div>
+      <div class="text">${text}</div>
+    `;
+
+    // Add to top of wall
+    wall.prepend(msgDiv);
+  }
+
+  function saveMessage(message) {
+    const messages = JSON.parse(localStorage.getItem("bulletinMessages")) || [];
+    messages.push(message);
+    localStorage.setItem("bulletinMessages", JSON.stringify(messages));
+  }
+</script>
+
+	<script>
   const playButton = document.getElementById("playButton");
   const music = document.getElementById("backgroundMusic");
 
