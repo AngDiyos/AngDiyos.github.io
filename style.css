@@ -205,6 +205,81 @@ a:visited {
   border: 2px solid white;
 }
 
+.bulletin-board {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1em;
+    font-family: "Story Script", sans-serif;
+    border: 1px solid rgba(255,255,255,0.3);
+}
 
+.bulletin-board h3 {
+    font-family: "Rubik Bubbles", sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.bulletin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bulletin-form input,
+.bulletin-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.bulletin-form button {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-family: "Rubik Bubbles", sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bulletin-form button:hover {
+    background-color: #ffccff;
+}
+
+.message-wall {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.message .name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.message .text {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #eee;
+}
+
+    
 }
 
